@@ -1,0 +1,16 @@
+package get.reps;
+
+import java.util.Collection;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import get.jpa.Klijent;
+import get.jpa.Racun;
+
+
+public interface RacunRepository extends JpaRepository<Racun,Integer> {
+	Collection<Racun> findByNazivContainingIgnoreCase(String naziv);
+	Collection<Racun> findByKlijent(Klijent klijentn);
+
+	
+}
