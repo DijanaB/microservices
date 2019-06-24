@@ -10,7 +10,7 @@ import get.jpa.Racun;
 
 public interface RacunRepository extends JpaRepository<Racun,Integer> {
 	Collection<Racun> findByNazivContainingIgnoreCase(String naziv);
-	Collection<Racun> findByKlijent(Klijent klijentn);
+	Collection<Racun> findByKlijent(Klijent klijent);
 
 	
 }
